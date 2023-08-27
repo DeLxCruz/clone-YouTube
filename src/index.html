@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,46 @@
     <script src="./main.js" defer></script>
     <title>Document</title>
   </head>
-  <body>
-    <h1 class="bg-orange-500">SIZA MANIN</h1>
+  <body class="flex font-sans">
+    <!-- Sidebar -->
+    <aside class="w-16 bg-red-600 h-screen text-white flex flex-col justify-between">
+      <div class="p-4">
+          <!-- Iconos del Sidebar -->
+          <div class="mb-8">
+              <!-- Icono de hamburguesa para ocultar/mostrar la barra lateral -->
+              <button id="toggleSidebar" class="text-white focus:outline-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                      <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
+                  </svg>
+              </button>
+          </div>
+          <!-- Íconos y títulos del Sidebar -->
+          <div class="space-y-4">
+              <div class="flex items-center space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                      <!-- Icono de Inicio -->
+                  </svg>
+                  <span class="hidden group-hover:block">Inicio</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                      <!-- Icono de Tendencias -->
+                  </svg>
+                  <span class="hidden group-hover:block">Tendencias</span>
+              </div>
+              <!-- Otros íconos y títulos del Sidebar -->
+              <!-- ... -->
+          </div>
+      </div>
+      <div class="p-4">
+          <!-- Ícono de YouTube Studio -->
+          <div class="flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                  <!-- Icono de YouTube Studio -->
+              </svg>
+              <span class="hidden group-hover:block">YouTube Studio</span>
+          </div>
+      </div>
+  </aside>
   </body>
 </html>

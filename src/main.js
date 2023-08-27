@@ -16,3 +16,11 @@ const asyncFunction = async (url) => {
 }
 
 asyncFunction(url)
+
+const toggleSidebarBtn = document.getElementById('toggleSidebar');
+const sidebar = document.querySelector('aside');
+
+toggleSidebarBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('w-16');
+    sidebar.classList.toggle('bg-gray-800');
+});
