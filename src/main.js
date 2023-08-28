@@ -1,4 +1,4 @@
-const url = '../data/dataChannel.json';
+const url = '../data/dataVideos.json';
 // const options = {
 // 	method: 'GET',
 // 	headers: {
@@ -10,10 +10,50 @@ const url = '../data/dataChannel.json';
 const asyncFunction = async (url) => {
 
     const response = await fetch(url);
-    const result = await response.text();
+    const result = await response.json();
     console.log(result);
 
+    let banner = document.querySelector(".container")
+        banner.insertAdjacentHTML("beforeend", /*HTML*/`
+        <div class="list-container">
+            ${result.contents.map((value) => /*HTML*/`
+                <div class="vid-list">
+                    <div class="contenedor-video">
+                        <img src="${value.video.thumbnails[3].url}" class="imagen-principal" data-video-titulo="${value.title}"
+                    </div>
+                    <div  class="flex-div">
+                        <div>
+                            <a href="">${value.title}</a>
+                            <h1>${value.video.title}</h1>
+                            <p>${value.video.stats.views} views ·${value.video.publishedTimeText}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join("")}
+        </div>
+    `)
+    
+    
+    const info = document.querySelectorAll(".vid-list")
+        
+    info.forEach(video_info =>{
+        const imagen_video = video_info.querySelector('.imagen-principal');
+        const titulo = imagen_video.getAttribute('data-video-titulo');
+
+        imagen_video.addEventListener('click', () =>{
+            const videoSeleccionado = obtenerVideoInfo(result, titulo);
+            localStorage.setItem('videoSeleccionado', JSON.stringify(videoSeleccionado));
+            window.location.href = '';
+        })
+    })
+    console.log(localStorage);
+    function obtenerVideoInfo(videos,title){
+        const videoVideo = videos.contents.find(v => v.title = title)
+        return videoVideo
+    }
+
 }
+
 
 asyncFunction(url)
 
@@ -29,5 +69,9 @@ toggleSidebarBtn.addEventListener('click', () => {
         iconText.classList.toggle('hidden');
     });
 });
+
+
+
+
 
 
