@@ -24,11 +24,11 @@ const asyncFunction = async (p1) => {
             ${result.contents.map((value) => /*HTML*/`
                 <div class="vid-list">
                     <div class="contenedor-video">
-                        <img src="${value.video.thumbnails[3].url}" class="imagen-principal" data-video-titulo="${value.title}"
+                        <img src="${value.video.thumbnails[3].url}" class="imagen-principal" data-video-titulo="${value.video.videoId}"
                     </div>
                     <div  class="flex-div">
                         <div>
-                            <a href="">${value.video.title}</a>
+                            <a href="./videoTab.html">${value.video.title}</a>
                             <p>${value.video.stats.views} views ·${value.video.publishedTimeText}</p>
                         </div>
                     </div>
@@ -57,7 +57,6 @@ const asyncFunction = async (p1) => {
     }
 
 }
-
 
 asyncFunction()
 
