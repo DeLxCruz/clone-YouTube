@@ -12,7 +12,8 @@
 <body class="font-sans">
     <header class="flex items-center px-4 py-3 justify-between">
         <div class="flex items-center gap-5">
-            <button id="toggleSidebar" class="focus:outline-none rounded-full w-[40px] h-[40px] grid place-items-center hover:bg-[#e6e6e6] hover:cursor-pointer">
+            <button id="toggleSidebar"
+                class="focus:outline-none rounded-full w-[40px] h-[40px] grid place-items-center hover:bg-[#e6e6e6] hover:cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="" width="24" height="24">
                     <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
                 </svg>
@@ -46,40 +47,46 @@
         </div>
     </header>
 
-    <!-- Sidebar -->
-    <aside class="w-16 bg-red-600 h-screen text-white flex flex-col justify-between transition-all duration-300 ease-in-out">
-        <div class="p-4">
-            <!-- Iconos del Sidebar -->
-            <!-- Íconos y títulos del Sidebar -->
-            <div class="space-y-4">
-                <div class="flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24"
-                        height="24">
-                        <!-- Icono de Inicio -->
-                    </svg>
-                    <span class="hidden group-hover:block">Inicio</span>
+    <main class="flex">
+        <aside
+            class="w-16 bg-red-600 h-screen text-white flex flex-col justify-between transition-all duration-300 ease-in-out">
+            <div class="p-6">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-7">
+                        <img src="../assets/home-1392-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                        <span class="text-black icon-text hidden">Home</span>
+                    </div>
+                    <div class="flex items-center space-x-7">
+                        <img src="../assets/library-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                        <span class="text-black icon-text hidden ">Subscription</span>
+                    </div>
+                    <div class="flex items-center space-x-7">
+                        <img src="../assets/library-add-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                        <span class="text-black icon-text hidden">Library</span>
+                    </div>
+                    <div class="flex items-center space-x-7">
+                        <img src="../assets/history-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                        <span class="text-black icon-text hidden">History</span>
+                    </div>
+                    <div class="flex items-center space-x-7">
+                        <img src="../assets/play-rectangle-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                        <span class="text-black icon-text hidden">Your Videos</span>
+                    </div>
+                    <div class="flex items-center space-x-7">
+                        <img src="../assets/clock-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                        <span class="text-black icon-text hidden">Watch Later</span>
+                    </div>
+                    <div class="flex items-center space-x-7">
+                        <img src="../assets/like-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                        <span class="text-black icon-text hidden">Liked Videos</span>
+                    </div>
                 </div>
-                <div class="flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24"
-                        height="24">
-                        <!-- Icono de Tendencias -->
-                    </svg>
-                    <span class="hidden group-hover:block">Tendencias</span>
-                </div>
-                <!-- Otros íconos y títulos del Sidebar -->
-                <!-- ... -->
             </div>
-        </div>
-        <div class="p-4">
-            <!-- Ícono de YouTube Studio -->
-            <div class="flex items-center space-x-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                    <!-- Icono de YouTube Studio -->
-                </svg>
-                <span class="hidden group-hover:block">YouTube Studio</span>
-            </div>
-        </div>
-    </aside>
+        </aside>
+        <section>
+            <h1>Holaaa</h1>
+        </section>
+    </main>
 </body>
 
 </html>

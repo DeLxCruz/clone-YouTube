@@ -19,7 +19,15 @@ asyncFunction(url)
 
 const toggleSidebarBtn = document.getElementById('toggleSidebar');
 const sidebar = document.querySelector('aside');
+const iconTexts = document.querySelectorAll('.icon-text');
 
 toggleSidebarBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('w-4');
+    sidebar.classList.toggle('w-16');
+    sidebar.classList.toggle('w-40');
+    
+    iconTexts.forEach(iconText => {
+        iconText.classList.toggle('hidden');
+    });
 });
+
+
