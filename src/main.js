@@ -21,6 +21,5 @@ const toggleSidebarBtn = document.getElementById('toggleSidebar');
 const sidebar = document.querySelector('aside');
 
 toggleSidebarBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('w-16');
-    sidebar.classList.toggle('bg-gray-800');
+    sidebar.classList.toggle('w-4');
 });
