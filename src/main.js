@@ -23,7 +23,7 @@ const iconTexts = document.querySelectorAll('.icon-text');
 
 toggleSidebarBtn.addEventListener('click', () => {
     sidebar.classList.toggle('w-16');
-    sidebar.classList.toggle('w-40');
+    sidebar.classList.toggle('w-52');
     
     iconTexts.forEach(iconText => {
         iconText.classList.toggle('hidden');
