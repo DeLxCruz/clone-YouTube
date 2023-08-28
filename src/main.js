@@ -28,8 +28,7 @@ const asyncFunction = async (p1) => {
                     </div>
                     <div  class="flex-div">
                         <div>
-                            <a href="">${value.title}</a>
-                            <h1>${value.video.title}</h1>
+                            <a href="">${value.video.title}</a>
                             <p>${value.video.stats.views} views ·${value.video.publishedTimeText}</p>
                         </div>
                     </div>
