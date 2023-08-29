@@ -1,3 +1,14 @@
+function playVideo(parameter) {
+    let iframe = document.querySelector('#mainVideo');
+    iframe.insertAdjacentHTML('afterbegin', `
+    <iframe width="100%" height="615" src="https://www.youtube.com/embed/${parameter}?si=czx-JXcyfxDxe0lv&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    `)
+}
+
+let storageItem = localStorage.getItem('ID')
+console.log(storageItem);
+playVideo(storageItem)
+
 const options = {
     method: 'GET',
     headers: {
@@ -5,8 +16,6 @@ const options = {
         'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
     }
 };
-
-{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/6GLXWseOGmQ?si=wov4iC3MMPARIVtq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */ }
 
 const asyncFunction = async (p1) => {
     options.method = 'GET'
@@ -50,16 +59,3 @@ const asyncFunction = async (p1) => {
 }
 
 asyncFunction()
-
-const toggleSidebarBtn = document.getElementById('toggleSidebar');
-const sidebar = document.querySelector('aside');
-const iconTexts = document.querySelectorAll('.icon-text');
-
-toggleSidebarBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('w-16');
-    sidebar.classList.toggle('w-52');
-
-    iconTexts.forEach(iconText => {
-        iconText.classList.toggle('hidden');
-    });
-});
