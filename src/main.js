@@ -21,7 +21,9 @@ const asyncFunction = async (p1) => {
     banner.insertAdjacentHTML("beforeend", /*HTML*/`
             ${result.contents.map((value) => /*HTML*/`
                 <div class="vid-list grid gap-y-3" videoID="${value.video.videoId}">
-                    <img src="${value.video.thumbnails[3].url}" class="rounded-lg hover:cursor-pointer img-vid" /> 
+                    <a href="./videoTab.html">
+                        <img src="${value.video.thumbnails[3].url}" class="rounded-lg" /> 
+                    </a>
                     <div  class="flex-div">
                         <div>
                             <a href="./videoTab.html" class="font-medium">${value.video.title}</a>
@@ -39,14 +41,6 @@ const asyncFunction = async (p1) => {
         vid.addEventListener('click', () => {
             let vidId = vid.getAttribute('videoID')
             localStorage.setItem('ID', vidId)
-        })
-    })
-
-    const selectedImg = document.querySelectorAll(".img-vid")
-
-    selectedImg.forEach(vid => {
-        vid.addEventListener('click', () => {
-            window.open('./videoTab.html')
         })
     })
 
