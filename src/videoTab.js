@@ -1,7 +1,7 @@
 function playVideo(parameter) {
     let iframe = document.querySelector('#mainVideo');
     iframe.insertAdjacentHTML('afterbegin', `
-    <iframe width="100%" height="615" src="https://www.youtube.com/embed/${parameter}?si=czx-JXcyfxDxe0lv&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="100%" height="615" src="https://www.youtube.com/embed/${parameter}?si=czx-JXcyfxDxe0lv&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     `)
 }
 
@@ -29,21 +29,17 @@ const asyncFunction = async (p1) => {
 
     let banner = document.querySelector(".container")
     banner.insertAdjacentHTML("beforeend", /*HTML*/`
-        <div class="list-container">
             ${result.contents.map((value) => /*HTML*/`
-                <div class="vid-list" videoID="${value.video.videoId}">
-                    <div class="contenedor-video">
-                        <img src="${value.video.thumbnails[3].url}" class="imagen-principal" /> 
-                    </div>
+                <div class="vid-list grid gap-y-3 w-fit" videoID="${value.video.videoId}">
+                    <img src="${value.video.thumbnails[3].url}" class="rounded-lg hover:cursor-pointer img-vid" /> 
                     <div  class="flex-div">
                         <div>
-                            <a href="./videoTab.html" class="font-thin">${value.video.title}</a>
-                            <p>${value.video.stats.views} views ·${value.video.publishedTimeText}</p>
+                            <a href="./videoTab.html" class="font-medium">${value.video.title}</a>
+                            <p class="text-[#aaa]">${value.video.stats.views} views • ${value.video.publishedTimeText}</p>
                         </div>
                     </div>
                 </div>
             `).join("")}
-        </div>
     `)
 
 
@@ -56,6 +52,14 @@ const asyncFunction = async (p1) => {
         })
     })
 
+    const selectedImg = document.querySelectorAll(".img-vid")
+
+    selectedImg.forEach(vid => {
+        vid.addEventListener('click', () => {
+            window.open('./videoTab.html')
+        })
+    })
+
 }
 
 asyncFunction()
@@ -65,10 +69,6 @@ const sidebar = document.querySelector('aside');
 const iconTexts = document.querySelectorAll('.icon-text');
 
 toggleSidebarBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('hidden');
     sidebar.classList.toggle('w-[250px]');
-    sidebar.classList.toggle('w-16');
-
-    iconTexts.forEach(iconText => {
-        iconText.classList.toggle('hidden');
-    });
 });     
