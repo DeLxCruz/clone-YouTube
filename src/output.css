@@ -644,6 +644,26 @@ video {
   width: 100%;
 }
 
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[380px\] {
+  width: 380px;
+}
+
+.w-\[350px\] {
+  width: 350px;
+}
+
+.w-\[320px\] {
+  width: 320px;
+}
+
+.w-\[250px\] {
+  width: 250px;
+}
+
 .border-collapse {
   border-collapse: collapse;
 }

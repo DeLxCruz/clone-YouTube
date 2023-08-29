@@ -52,7 +52,7 @@ const sidebar = document.querySelector('aside');
 const iconTexts = document.querySelectorAll('.icon-text');
 
 toggleSidebarBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('w-52');
+    sidebar.classList.toggle('w-[250px]');
     sidebar.classList.toggle('w-16');
 
     iconTexts.forEach(iconText => {
