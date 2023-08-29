@@ -21,7 +21,7 @@ const asyncFunction = async (p1) => {
     banner.insertAdjacentHTML("beforeend", /*HTML*/`
             ${result.contents.map((value) => /*HTML*/`
                 <div class="vid-list grid gap-y-3" videoID="${value.video.videoId}">
-                    <img src="${value.video.thumbnails[3].url}" class="rounded-lg hover:cursor-pointer" width="400px" /> 
+                    <img src="${value.video.thumbnails[3].url}" class="rounded-lg hover:cursor-pointer" /> 
                     <div  class="flex-div">
                         <div>
                             <a href="./videoTab.html" class="font-medium">${value.video.title}</a>
