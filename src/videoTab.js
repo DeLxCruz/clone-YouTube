@@ -59,3 +59,16 @@ const asyncFunction = async (p1) => {
 }
 
 asyncFunction()
+
+const toggleSidebarBtn = document.getElementById('toggleSidebar');
+const sidebar = document.querySelector('aside');
+const iconTexts = document.querySelectorAll('.icon-text');
+
+toggleSidebarBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('w-[250px]');
+    sidebar.classList.toggle('w-16');
+
+    iconTexts.forEach(iconText => {
+        iconText.classList.toggle('hidden');
+    });
+});     

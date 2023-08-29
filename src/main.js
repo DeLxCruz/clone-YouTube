@@ -6,7 +6,6 @@ const options = {
     }
 };
 
-{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/6GLXWseOGmQ?si=wov4iC3MMPARIVtq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */ }
 
 const asyncFunction = async (p1) => {
     options.method = 'GET'
@@ -40,6 +39,7 @@ const asyncFunction = async (p1) => {
         vid.addEventListener('click', () => {
             let vidId = vid.getAttribute('videoID')
             localStorage.setItem('ID', vidId)
+            window.open('./videoTab.html')
         })
     })
 
