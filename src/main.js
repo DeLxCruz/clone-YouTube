@@ -18,23 +18,19 @@ const asyncFunction = async (p1) => {
 
     let height = 0, cont = 0;
 
-    let banner = document.querySelector(".container")
+    let banner = document.querySelector("#container")
     banner.insertAdjacentHTML("beforeend", /*HTML*/`
-        <div class="list-container">
             ${result.contents.map((value) => /*HTML*/`
-                <div class="vid-list" videoID="${value.video.videoId}">
-                    <div class="contenedor-video">
-                        <img src="${value.video.thumbnails[3].url}" class="imagen-principal" /> 
-                    </div>
+                <div class="vid-list grid gap-y-3" videoID="${value.video.videoId}">
+                    <img src="${value.video.thumbnails[3].url}" class="rounded-lg hover:cursor-pointer" width="400px" /> 
                     <div  class="flex-div">
                         <div>
-                            <a href="./videoTab.html">${value.video.title}</a>
-                            <p>${value.video.stats.views} views ·${value.video.publishedTimeText}</p>
+                            <a href="./videoTab.html" class="font-medium">${value.video.title}</a>
+                            <p class="text-[#aaa]">${value.video.stats.views} views • ${value.video.publishedTimeText}</p>
                         </div>
                     </div>
                 </div>
             `).join("")}
-        </div>
     `)
 
 
@@ -56,8 +52,8 @@ const sidebar = document.querySelector('aside');
 const iconTexts = document.querySelectorAll('.icon-text');
 
 toggleSidebarBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('w-16');
     sidebar.classList.toggle('w-52');
+    sidebar.classList.toggle('w-16');
 
     iconTexts.forEach(iconText => {
         iconText.classList.toggle('hidden');
