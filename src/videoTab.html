@@ -8,7 +8,78 @@
     <title>Document</title>
 </head>
 <body>
-    <main>
+    <header class="flex items-center px-4 py-3 justify-between">
+        <div class="flex items-center gap-5">
+            <button id="toggleSidebar"
+                class="focus:outline-none rounded-full w-[40px] h-[40px] grid place-items-center hover:bg-[#e6e6e6] hover:cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="" width="24" height="24">
+                    <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+                </svg>
+            </button>
+            <a href="./index.html"><img src="../assets/youtube-logo.png" alt="" width="90px" height="20px" /></a>
+        </div>
+        <div class="flex  border-collapse">
+            <input class="border-[1px] border-[#ccc] rounded-l-full pl-4 pr-1 h-[38px] w-[500px] pb-1" type="search"
+                name="" id="ipt-seacrh" placeholder="Search" />
+            <button
+                class="bg-[#f0f0f0] w-[64px] h-[38px] grid place-items-center border border-l-[0px] rounded-r-full border-[#c6c6c6]">
+                <img src="../assets/search-svgrepo-com black.svg" alt="" srcset="" width="16px" height="16px" />
+            </button>
+            <div
+                class="ml-4 bg-[#f0f0f0] rounded-full w-[40px] h-[40px] grid place-items-center hover:bg-[#e6e6e6] hover:cursor-pointer">
+                <img src="../assets/mic-on-svgrepo-com.svg" alt="" width="24px" height="24px">
+            </div>
+        </div>
+        <div class="flex justify-between items-center">
+            <div class="flex gap-3 items-center">
+                <div
+                    class="rounded-full w-[40px] h-[40px] grid place-items-center hover:bg-[#e6e6e6] hover:cursor-pointer">
+                    <img src="../assets/video-plus-svgrepo-com.svg" alt="" width="24px" height="24px" />
+                </div>
+                <div
+                    class="rounded-full w-[40px] h-[40px] grid place-items-center hover:bg-[#e6e6e6] hover:cursor-pointer">
+                    <img src="../assets/notification-bell-svgrepo-com.svg" alt="" width="24px" height="24px" />
+                </div>
+                <img class="rounded-full w-[32px] h-[32px]" src="../assets/user-img.jpg" alt="" />
+            </div>
+        </div>
+    </header>
+    <main class="flex">
+        <aside
+        class="w-[250px] text-white flex flex-col justify-between transition-all duration-300 ease-in-out menu-open">
+        <div class="p-4 pl-6">
+            <div class="mt-6 flex flex-col space-y-8 text-lg">
+                <div class="flex items-center space-x-7">
+                    <img src="../assets/home-1392-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                    <span class="text-black icon-text">Home</span>
+                </div>
+                <div class="flex items-center space-x-7">
+                    <img src="../assets/library-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                    <span class="text-black icon-text">Subscription</span>
+                </div>
+                <div class="flex items-center space-x-7">
+                    <img src="../assets/library-add-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                    <span class="text-black icon-text">Library</span>
+                </div>
+                <div class="flex items-center space-x-7">
+                    <img src="../assets/history-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                    <span class="text-black icon-text">History</span>
+                </div>
+                <div class="flex items-center space-x-7">
+                    <img src="../assets/play-rectangle-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                    <span class="text-black icon-text">Your Videos</span>
+                </div>
+                <div class="flex items-center space-x-7">
+                    <img src="../assets/clock-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                    <span class="text-black icon-text">Watch Later</span>
+                </div>
+                <div class="flex items-center space-x-7">
+                    <img src="../assets/like-svgrepo-com.svg" alt="" srcset="" class="w-6 h-6">
+                    <span class="text-black icon-text">Liked Videos</span>
+                </div>
+            </div>
+        </div>
+    </aside>
         <div id="mainVideo">
 
         </div>
