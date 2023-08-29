@@ -857,6 +857,14 @@ video {
   cursor: pointer;
 }
 
+.hover\:rounded-full:hover {
+  border-radius: 9999px;
+}
+
+.hover\:rounded-xl:hover {
+  border-radius: 0.75rem;
+}
+
 .hover\:bg-\[\#e6e6e6\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(230 230 230 / var(--tw-bg-opacity));
