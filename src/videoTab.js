@@ -64,40 +64,42 @@ const asyncFunction = async (p1) => {
         console.log(title);
 
         mainVideo.insertAdjacentHTML("beforeend", /*HTML*/`
-                <div>
-                <h1>${title}</h1>
-                <div>
-                    <div>
-                        <img src="" alt="">
+                <div class="mt-3">
+                <h1 class="text-xl font-semibold">${title}</h1>
+                <div class="mt-3 flex justify-between">
+                    <div class="flex">
+                        <img class="rounded-full w-[40px] mr-3" src="https://yt3.ggpht.com/ytc/AOPolaRQMdTorx40VODGGitv_bCo4G_Dr6eFvmBuma3G=s48-c-k-c0x00ffffff-no-rj" alt="">
                         <div>
-                            <a href=""></a>
-                            <p></p>
+                            <a class="font-medium" href="">CreativeCode</a>
+                            <p class="text-[#606060] text-xs">495 suscriptores</p>
                         </div>
-                        <button></button>
+                        <button class="ml-6 rounded-full bg-black text-white px-4 text-center">Suscribirse</button>
                     </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="" alt="">
-                                <p></p>
+                    <div class="flex space-x-3">
+                        <div class="flex items-center bg-[#f0f0f0] rounded-full">
+                            <div class="px-4 h-full items-center flex gap-2 rounded-l-full hover:bg-[#e6e6e6] hover:cursor-pointer">
+                                <img width="24px" src="../assets/like-svgrepo-com.svg" alt="">
+                                <p class="text-sm">3</p>
                             </div>
-                            <hr>
-                            <div>
-                                <img src="" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <img src="" alt="">
-                                <p></p>
-                            </div>
-                            <div>
-                                <img src="" alt="">
-                                <p></p>
+                            <hr class="h-[24px] w-[1px] bg-black/[.1]">
+                            <div class="px-4 h-full items-center flex gap-2 rounded-r-full hover:bg-[#e6e6e6] hover:cursor-pointer">
+                                <img width="24px" src="../assets/dislike-svgrepo-com.svg" alt="">
                             </div>
                         </div>
-                        <div>
-                            <img src="" alt="">
+                        <div class="bg-[#f0f0f0] rounded-full font-medium text-sm flex items-center px-4 h-full space-x-3 hover:bg-[#e6e6e6] hover:cursor-pointer">
+                            <img width="24px" src="../assets/share-arrow-svgrepo-com.svg" alt="">
+                            <p>Compartir</p>
+                        </div>
+                        <div class="bg-[#f0f0f0] rounded-full font-medium text-sm flex items-center px-4 h-full space-x-3 hover:bg-[#e6e6e6] hover:cursor-pointer">
+                            <img width="24px" src="../assets/download-svgrepo-com.svg" alt="">
+                            <p>Descargar</p>
+                        </div>
+                        <div class="bg-[#f0f0f0] rounded-full font-medium text-sm flex items-center px-4 h-full space-x-3 hover:bg-[#e6e6e6] hover:cursor-pointer">
+                            <img width="24px" src="../assets/scissors-svgrepo-com.svg" alt="">
+                            <p>Recortar</p>
+                        </div>
+                        <div class="bg-[#f0f0f0] rounded-full font-normal flex items-center px-2 h-full hover:bg-[#e6e6e6] hover:cursor-pointer">
+                            <img width="24px" src="../assets/ellipsis-h-svgrepo-com.svg" alt="">
                         </div>
                     </div>
                 </div>
