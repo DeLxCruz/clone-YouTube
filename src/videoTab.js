@@ -70,7 +70,7 @@ const asyncFunction = async (p1) => {
                     <div class="flex">
                         <img class="rounded-full w-[40px] mr-3" src="https://yt3.ggpht.com/ytc/AOPolaRQMdTorx40VODGGitv_bCo4G_Dr6eFvmBuma3G=s48-c-k-c0x00ffffff-no-rj" alt="">
                         <div>
-                            <a class="font-medium" href="">CreativeCode</a>
+                            <a class="font-medium" href="./channelTab.html">CreativeCode</a>
                             <p class="text-[#606060] text-xs">495 suscriptores</p>
                         </div>
                         <button class="ml-6 rounded-full bg-black text-white px-4 text-center">Suscribirse</button>
