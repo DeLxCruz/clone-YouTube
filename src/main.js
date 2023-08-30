@@ -15,8 +15,6 @@ const asyncFunction = async () => {
     const result = await response.json();
     console.log(result);
 
-    let height = 0, cont = 0;
-
     let banner = document.querySelector("#container")
     banner.insertAdjacentHTML("beforeend", /*HTML*/`
             ${result.contents.map((value) => /*HTML*/`
