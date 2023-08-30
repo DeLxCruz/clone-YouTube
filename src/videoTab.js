@@ -32,7 +32,7 @@ const asyncFunction = async (p1) => {
             ${result.contents.map((value) => /*HTML*/`
                 <div class="vid-list flex gap-x-3" videoID="${value.video.videoId}">
                     <a href="./videoTab.html">
-                        <img src="${value.video.thumbnails[0].url}" class="rounded-lg hover:cursor-pointer img-vid" /> 
+                        <img src="${value.video.thumbnails[0].url}" class="rounded-lg hover:cursor-pointer max-w-max" /> 
                     </a>
                     <div class="">
                         <div class="grid space-y-2">
@@ -53,6 +53,57 @@ const asyncFunction = async (p1) => {
             localStorage.setItem('ID', vidId)
         })
     })
+
+    const mainVideo = document.querySelector('#mainVideo')
+    const matchVideoID = result.contents.find(video => video.video.videoId === storageItem)
+
+    if (matchVideoID) {
+        const { title, stats, publishedTimeText } = matchVideoID.video
+        const { views } = stats
+
+        console.log(title);
+
+        mainVideo.insertAdjacentHTML("beforeend", /*HTML*/`
+                <div>
+                <h1>${title}</h1>
+                <div>
+                    <div>
+                        <img src="" alt="">
+                        <div>
+                            <a href=""></a>
+                            <p></p>
+                        </div>
+                        <button></button>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <img src="" alt="">
+                                <p></p>
+                            </div>
+                            <hr>
+                            <div>
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="" alt="">
+                                <p></p>
+                            </div>
+                            <div>
+                                <img src="" alt="">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    `)
+    }
 
 }
 
