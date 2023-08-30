@@ -9,9 +9,9 @@ const options = {
 
 const asyncFunction = async () => {
     options.method = 'GET'
-    // let url = await fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US",options);
-    const url = '../data/dataVideos.json';
-    const response = await fetch(url);
+    const url = "https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US";
+    // const url = '../data/dataVideos.json';
+    const response = await fetch(url, options);
     const result = await response.json();
     console.log(result);
 
