@@ -103,6 +103,7 @@ const asyncFunction = async (p1) => {
                         </div>
                     </div>
                 </div>
+                <h1 class="mt-12 text-2xl text-center">No comments available</h1>
             </div>
     `)
     }
