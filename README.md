@@ -32,7 +32,7 @@ Este proyecto es un clon de YouTube o un YouTube Pirata que utiliza la API de Ra
 
 ## Configuración del Proyecto
 
-1. Clona el repositorio a tu máquina local:
+1. Clona el repositorio a tu máquina local: (https://github.com/DeLxCruz/clone-YouTube.git)
 
 2. Abre el archivo `index.html` en tu navegador web para acceder a la vista principal.
 
